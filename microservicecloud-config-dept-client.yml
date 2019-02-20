@@ -2,13 +2,14 @@
   profiles:
     active: dev
 ---
-sserver:
+server:
   port: 8001
 mybatis:
   config-location: classpath:mybatis/mybatis_config.xml
   type-aliases-package: cn.zzsxt.springcloud.entity
   mapper-locations: classpath:mybatis/mapper/**/*.xml
 spring:
+  profiles: dev
   application:
     name: springcloud-provider-dept
   datasource:
@@ -44,6 +45,7 @@ mybatis:
   type-aliases-package: cn.zzsxt.springcloud.entity
   mapper-locations: classpath:mybatis/mapper/**/*.xml
 spring:
+  profiles: test
   application:
     name: springcloud-provider-dept
   datasource:
